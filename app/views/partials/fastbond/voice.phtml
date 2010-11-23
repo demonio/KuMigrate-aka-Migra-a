@@ -1,0 +1,24 @@
+<?php
+
+if ( ! empty($_SESSION['voice']) )
+{ ?>
+	<script type="text/javascript">
+	
+		function play(file)
+		{
+			$('#play').remove();
+			$('<object id="play"></object>').appendTo('body').attr( { type:'video/quicktime', data:file+'.mov' } );
+		}
+	
+		$(function()
+			{	
+				play('/files/fastbond/<?php echo $_SESSION['voice']; ?>');
+			}
+		);
+	
+	</script><?php
+
+	unset($_SESSION['voice']);
+}
+
+?>

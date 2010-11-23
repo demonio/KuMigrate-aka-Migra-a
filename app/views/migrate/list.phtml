@@ -1,0 +1,31 @@
+<?php if ( empty($items) ) $items = array('Result: Empty!'); ?>
+
+<div id="filter">Filtro sobre la lista: <input /></div>
+
+<hr />
+
+<ul id="list"><?php foreach ($items as $item) echo "<li>$item</li>"; ?></ul>
+
+<script type="text/javascript">
+
+$(function()
+	{
+		$('#filter input').each(function()
+			{
+				this.onkeyup=filter;
+			}
+		);
+		
+		$('ul').find('li:even').css( { background:'#FFF' } );
+	}
+);
+
+function filter()
+{
+	$('#list li').hide();
+	$('#list').find(':contains("'+$('#filter input').val()+'")').show()
+	parent().find('li:even').css( { background:'#FFF' } );
+}
+
+
+</script>

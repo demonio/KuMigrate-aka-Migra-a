@@ -1,0 +1,58 @@
+
+/* RESET */
+
+    * { margin:0; padding:0; border:0; outline:0; position:relative; }
+    
+    html, body, .full-height { height:100%; }
+    .full-width { width:100%; }
+	
+	body { font-size:62.5%; }
+
+    a { text-decoration:none; cursor:pointer; }
+    
+    button { cursor:pointer; }
+	
+	em { font-style:italic !important; }
+	strong { font-weight:bold !important; }
+	
+	img { border:0 none; }
+	    
+    table { border-collapse:collapse; border-spacing:0; }
+	
+	td { text-align:left; } /* OPERA FIX */
+	
+	ol,
+	ul { list-style:none; }
+	
+    
+/* FRAMEWORK */
+
+ 	/* POSITION */   
+    .clear { clear:both; }
+    .f-left { float:left; }
+    .f-right { float:right; }
+
+ 	/* DISPLAY */   
+	.block { display:block; }
+    .hide { display:none; }
+	
+	/* TABLE */   
+	.cell { display:table-cell; }
+	.column { display:table-column; }
+	.table { display:table; }
+
+ 	/* ALIGN */   
+    .center { text-align:center; }
+    .left { text-align:left; }
+    .right { text-align:right; }
+    .bottom { vertical-align:bottom; }
+    .middle { vertical-align:middle; }
+    .top { vertical-align:top; }
+    
+	/* FONTS */
+    .nowrap { white-space:nowrap; }  
+    .red { color:red; }
+    .i { font-style:italic; }
+    .b { font-weight:bold; }    
+    .u { text-decoration:underline; }
+    

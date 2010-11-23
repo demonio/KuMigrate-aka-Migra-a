@@ -1,0 +1,12 @@
+<?php
+
+if ( ! empty($_SESSION['alert']) )
+{
+	$bg = array('F99', 'FC9', 'FF9', 'CF9', '9F9', '9FC', '9FF', '9CF', '99F', 'C9F', 'F9F', 'F9C');
+	$n = rand(0, 11);
+	$style = ' style="background:#' . $bg[$n] . '; text-align:right"'; ?>
+	<div<?php echo $style; ?>><?php echo $_SESSION['alert']; ?></div><?php
+	unset($_SESSION['alert']);
+}
+
+?>

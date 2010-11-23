@@ -1,0 +1,8 @@
+<form action="routes/save" method="post">
+	<ul><?php
+		foreach ($routes as $k => $v)
+		{ ?>
+			<li><input value="<?php echo $k; ?>" /> = <input value="<?php echo $v; ?>" /></li><?php
+		} ?>
+	</ul>
+</form>

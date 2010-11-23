@@ -1,0 +1,31 @@
+<?php if ( empty($items) ) exit('Humm... no hay nada que mostrar.'); ?>
+
+<div id="list-two">
+	<select><?php
+		foreach ($items as $item)
+		{ ?>
+			<option<?php if ($item == $action_name) { ?> selected="selected"<?php } ?> value="<?php echo $item; ?>"><?php echo $item; ?> &nbsp; </option><?php
+		} ?>	
+	</select>
+	
+	<input value="/Applications/MAMP/htdocs/___blog-0.5" />
+	
+	<button type="button">RUN</button>
+</div>
+
+<script type="text/javascript">
+
+$(function()
+	{
+		$('#list-two button').live('click', function()
+			{
+				action = $('#list-two select').val();
+				param = $('#list-two input').val();
+				if ( ! param) return alert('La accion necesita un parametro !!');
+				location='/<?php echo $controller_name; ?>/'+action+'/?dir='+param;
+			}
+		);
+	}
+);
+
+</script>
